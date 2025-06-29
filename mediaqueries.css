@@ -101,3 +101,19 @@
     text-align: justify;
   }
 }
+
+
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #hamburger-nav, 
+  .hamburger-menu {
+    display: inline-block;
+  }
+}

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Madhura S N - Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -10,6 +10,22 @@
     <!-- NAVIGATION -->
     <nav id="desktop-nav">
       <div class="logo">Madhura S N</div>
+
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -21,19 +37,40 @@
     <!-- PROFILE -->
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profilepic.jpg" alt="Madhura's Picture" style="border-radius: 50%" />
+        <img
+          src="./assets/profilepic.jpg"
+          alt="Madhura's Picture"
+          style="border-radius: 50%"
+        />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Madhura S N</h1>
         <p class="section__text__p2">Software Developer</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">Download CV</button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
         </div>
         <div id="socials-container">
-          <img src="./assets/linked.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/madhurasharan/'" />
-          <img src="./assets/github_white.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/madhurasharan'" />
+          <img
+            src="./assets/linked.png"
+            alt="LinkedIn"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/madhurasharan/'"
+          />
+          <img
+            src="./assets/github_white.png"
+            alt="GitHub"
+            class="icon"
+            onclick="location.href='https://github.com/madhurasharan'"
+          />
         </div>
       </div>
     </section>
@@ -48,17 +85,20 @@
             <div class="details-container">
               <img src="./assets/experience_white.png" class="icon" />
               <h3>Achievements</h3>
-              <p>1X Ideathon winner<br>SheCodes Scholar</p>
+              <p>1X Ideathon winner<br />SheCodes Scholar</p>
             </div>
             <div class="details-container">
               <img src="./assets/users.png" class="icon" />
               <h3>Education</h3>
-              <p>BE - 8.8 CGPA<br>12th - 100%<br>10th - 99.2%</p>
+              <p>BE - 8.8 CGPA<br />12th - 100%<br />10th - 99.2%</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              I'm <b>Madhura S N</b>, a Computer Science student at <b>Acharya Institute of Technology</b> with a passion for web development and machine learning. I love solving problems and creating meaningful digital experiences.
+              I'm <b>Madhura S N</b>, a Computer Science student at
+              <b>Acharya Institute of Technology</b> with a passion for web
+              development and machine learning. I love solving problems and
+              creating meaningful digital experiences.
             </p>
           </div>
         </div>
@@ -74,21 +114,81 @@
           <div class="details-container">
             <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>HTML</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>CSS</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>JavaScript</h3><p>Basic</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Bootstrap</h3><p>Basic</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>React</h3><p>Basic</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Figma</h3><p>Intermediate</p></div></article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Bootstrap</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>React</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Figma</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
           <div class="details-container">
             <h2 class="experience-sub-title">Other Skills</h2>
             <div class="article-container">
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Database</h3><p>MySQL, MongoDB</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Node.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Express.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/verified.png" class="icon" /><div><h3>Version Control</h3><p>Git, GitHub</p></div></article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Database</h3>
+                  <p>MySQL, MongoDB</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Node.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Express.js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/verified.png" class="icon" />
+                <div>
+                  <h3>Version Control</h3>
+                  <p>Git, GitHub</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -100,49 +200,84 @@
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
 
-      <!-- Filter Tabs -->
-      <div class="project-filters">
-        <span class="filter active" data-filter="all">All</span>
-        <span class="filter" data-filter="htmlcss">Website Design (HTML&CSS)</span>
-        <span class="filter" data-filter="miniprojects">Mini Projects (Java&C)</span>
-        <span class="filter" data-filter="ml">Machine Learning</span>
-        <span class="filter" data-filter="javascript">JavaScript</span>
-        <span class="filter" data-filter="figma">Figma</span>
-        <span class="filter" data-filter="restapi">Rest API</span>
-      </div>
+    <!-- Filter Tabs -->
+<div class="project-filters">
+  <span class="filter" data-filter="htmlcss">HTML & CSS</span>
+  <span class="filter" data-filter="javascript">JavaScript</span>
+  <span class="filter" data-filter="java">Java</span>
+  <span class="filter" data-filter="ml">Machine Learning</span>
+  <span class="filter" data-filter="figma">Figma</span>
+  <span class="filter" data-filter="dsa">DSA</span>
+  <span class="filter active" data-filter="all">All</span>
+</div>
+
 
       <!-- Project Cards -->
       <div class="experience-details-container">
         <div class="about-containers">
-          <div class="details-container color-container project-card" data-category="htmlcss javascript">
+          <div
+            class="details-container color-container project-card"
+            data-category="htmlcss javascript"
+          >
             <div class="article-container">
               <img src="./assets/project1.png" class="project-img" />
             </div>
             <h2 class="project-title">Random Password Generator</h2>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/madhurasharan/Random-password-Generator'">GitHub</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://madhurasharan.github.io/Random-password-Generator/'">Live Demo</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/madhurasharan/Random-password-Generator'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://madhurasharan.github.io/Random-password-Generator/'"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
 
-          <div class="details-container color-container project-card" data-category="javascript">
+          <div
+            class="details-container color-container project-card"
+            data-category="javascript"
+          >
             <div class="article-container">
               <img src="./assets/project2.png" class="project-img" />
             </div>
             <h2 class="project-title">Dice Game</h2>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/madhurasharan/Dice-Game'">GitHub</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://madhurasharan.github.io/Dice-Game/'">Live Demo</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/madhurasharan/Dice-Game'"
+              >
+                GitHub
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://madhurasharan.github.io/Dice-Game/'"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
 
-          <div class="details-container color-container project-card" data-category="ml restapi">
+          <div
+            class="details-container color-container project-card"
+            data-category="ml restapi"
+          >
             <div class="article-container">
               <img src="./assets/project3.png" class="project-img" />
             </div>
             <h2 class="project-title">Vehicle Detection and Counting</h2>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/madhurasharan/Vehicle-Detection-Counting-Using-OpenCV'">GitHub</button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/madhurasharan/Vehicle-Detection-Counting-Using-OpenCV'"
+              >
+                GitHub
+              </button>
             </div>
           </div>
         </div>

@@ -396,6 +396,7 @@ footer p {
   text-align: center;
   color: #94A3B8;
 }
+
 .project-filters {
   display: flex;
   flex-wrap: wrap;
@@ -403,8 +404,8 @@ footer p {
   gap: 1rem;
   margin: 1.5rem auto;
   padding: 1rem;
-  background-color: #fbb6ce;
-  border: 1px solid #c08497;
+  background-color: #1E293B; /* darker theme background */
+  border: 1px solid #334155;
   border-radius: 0.5rem;
 }
 
@@ -414,15 +415,19 @@ footer p {
   border-radius: 0.5rem;
   cursor: pointer;
   background-color: transparent;
-  color: #334155;
+  color: #E2E8F0;
+  border: 1px solid transparent;
   transition: 0.3s ease;
 }
 
 .project-filters .filter:hover {
-  background-color: #fda4af;
+  background-color: #334155;
+  border-color: #38BDF8;
+  color: #38BDF8;
 }
 
 .project-filters .filter.active {
-  background-color: #c08497;
-  color: white;
+  background-color: #0EA5E9;
+  color: #ffffff;
+  border-color: #0EA5E9;
 }

@@ -1,29 +1,33 @@
-// Project Filter Logic
+// Filter Project Cards
 const filterButtons = document.querySelectorAll('.filter');
 const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    const selectedFilter = button.dataset.filter;
+    const selectedCategory = button.dataset.filter;
 
-    // Highlight the active filter button
+    // Highlight the active filter
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
-    // Show/hide projects based on the selected filter
+    // Show/hide cards with flex effect
     projectCards.forEach(card => {
       const cardCategories = card.dataset.category.split(' ');
-      const shouldShow = selectedFilter === 'all' || cardCategories.includes(selectedFilter);
-      card.style.display = shouldShow ? 'block' : 'none';
+      const isMatch = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
+
+      card.style.display = isMatch ? 'flex' : 'none';
+      card.style.opacity = isMatch ? '1' : '0';
     });
   });
 });
 
-// Hamburger Menu Toggle Logic
+// Toggle Mobile Menu
 function toggleMenu() {
   const menuLinks = document.querySelector(".menu-links");
   const hamburgerIcon = document.querySelector(".hamburger-icon");
 
   menuLinks.classList.toggle("open");
   hamburgerIcon.classList.toggle("open");
+
+  document.body.classList.toggle("no-scroll");
 }
