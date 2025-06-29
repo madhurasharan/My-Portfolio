@@ -396,3 +396,33 @@ footer p {
   text-align: center;
   color: #94A3B8;
 }
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: #fbb6ce;
+  border: 1px solid #c08497;
+  border-radius: 0.5rem;
+}
+
+.project-filters .filter {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: #334155;
+  transition: 0.3s ease;
+}
+
+.project-filters .filter:hover {
+  background-color: #fda4af;
+}
+
+.project-filters .filter.active {
+  background-color: #c08497;
+  color: white;
+}
