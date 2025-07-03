@@ -1,25 +1,23 @@
-// Filter Project Cards
-const filterButtons = document.querySelectorAll('.filter');
-const projectCards = document.querySelectorAll('.project-card');
 
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedCategory = button.dataset.filter;
+  const filterButtons = document.querySelectorAll('.filter');
+  const projectCards = document.querySelectorAll('.project-card');
 
-    // Highlight the active filter
-    filterButtons.forEach(btn => btn.classList.remove('active'));
-    button.classList.add('active');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const selectedCategory = button.dataset.filter;
 
-    // Show/hide cards with flex effect
-    projectCards.forEach(card => {
-      const cardCategories = card.dataset.category.split(' ');
-      const isMatch = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-      card.style.display = isMatch ? 'flex' : 'none';
-      card.style.opacity = isMatch ? '1' : '0';
+      projectCards.forEach(card => {
+        const cardCategories = card.dataset.category.split(' ');
+        const isMatch = selectedCategory === 'all' || cardCategories.includes(selectedCategory);
+        card.style.display = isMatch ? 'flex' : 'none';
+      });
     });
   });
-});
+
+
 
 // Toggle Mobile Menu
 function toggleMenu() {
