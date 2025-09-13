@@ -425,16 +425,17 @@
   }
 }
 
-/* Hide desktop nav and show hamburger menu on small screens */
+/* Hide nav links and show hamburger menu on small screens */
 @media screen and (max-width: 768px) {
+  /* Do not hide the entire nav */
   #desktop-nav {
-    display: none;
-  }
-  .hamburger-menu {
-    display: inline-block !important;
+    display: flex;
   }
   .nav-links {
     display: none !important;
+  }
+  .hamburger-menu {
+    display: inline-block !important;
   }
 }
 
